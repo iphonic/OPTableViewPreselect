@@ -3,7 +3,7 @@ Adding capability of preselecting cell using https://github.com/mbrandonw/OPTabl
 
 This allows you to preselect any cell, that might be useful in some scenarios. All you need to do is to define
 
-    self.tableVIew.selectionDatasource=self;
+    self.tableView.selectionDatasource=self;
  
 
 and return the preselected row number with new `NSIndexPath`
@@ -11,3 +11,5 @@ and return the preselected row number with new `NSIndexPath`
     -(NSIndexPath *)preSelectIndexPath{
        return [NSIndexPath indexPathForRow:10 inSection:0];
     }
+    
+Works only if `self.tableView.snapToRows=YES;`
